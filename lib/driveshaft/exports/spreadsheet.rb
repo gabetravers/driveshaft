@@ -28,7 +28,7 @@ module Driveshaft
       end
 
       return {
-        body: JSON.dump(data).chop.chop.chop,
+        body: JSON.dump(data),
         content_type: 'application/json; charset=utf-8'
       }
     end
