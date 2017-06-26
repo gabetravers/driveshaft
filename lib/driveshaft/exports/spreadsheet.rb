@@ -28,7 +28,7 @@ module Driveshaft
       end
 
       return {
-        body: JSON.dump(data).slice(10..50),
+        body: JSON.dump(data).delete "{\" \":",
         content_type: 'application/json; charset=utf-8'
       }
     end
