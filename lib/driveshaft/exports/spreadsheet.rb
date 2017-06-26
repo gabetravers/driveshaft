@@ -28,7 +28,7 @@ module Driveshaft
       end
 
       return {
-        body: JSON.dump(data).delete "{\" \":",
+        body: JSON.dump(data).delete "uuid",
         content_type: 'application/json; charset=utf-8'
       }
     end
