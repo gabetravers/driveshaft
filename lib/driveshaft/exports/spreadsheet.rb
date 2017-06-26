@@ -25,12 +25,10 @@ module Driveshaft
           entry.keys.select { |k| k && k.match(/:hide$/) }.each { |k| entry.delete(k) }
           data[sheet_name] << entry
         end
-        jsonBody = JSON.dump(data)
-        jsonTrim = jsonBody.slice!(0,5)
       end
 
       return {
-        body: jsonTrim
+        body: JSON.dump(data),
         content_type: 'application/json; charset=utf-8'
       }
     end
